@@ -18,6 +18,12 @@ dmesg | grep kfd
 ```
 
 Hint2:  add your user to 'render' ( or 'video' ) group before you try rocm.
+Hint3:  install maybe missing system library.
+
+```
+sudo apt install libtinfo6
+```
+
 
  * Download MyROCm from:
 
