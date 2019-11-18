@@ -7,6 +7,20 @@ Official rocm release lack the support for new hardware like Navi.
 #### Dependancy
 MyROCm running on  ubuntu 19.10 + ( linux kernel 5.3+ ).  or linux environment with kernel > 5.3 and gcc > 9.2.1
 
+#### Changes from official ROCM
+
+Few changes made for navi10, include
+
+ * Clang 
+ 
+ * Hcc
+ 
+ * Hip
+ 
+ * Hsa Rumtime
+ 
+ * Roct 
+
 #### Installation guide.
 
  * Prepare your ubuntu 19.10 environment.
