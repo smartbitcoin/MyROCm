@@ -10,8 +10,14 @@ MyROCm running on  ubuntu 19.10 + ( linux kernel 5.3+ ).
 #### Installation guide.
 
  * Prepare your ubuntu 19.10 environment.
+Hint1:  check all kernel driver was properly loaded.
 
-Hint:  ubuntu 19.10 ship with kernel 5.3+ but missing navi firmware. it can be download from https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/amdgpu   and put into  /lib/firmware/amdgpu. 
+```
+dmesg | grep amdgpu
+dmesg | grep kfd
+```
+
+Hint2:  add your user to 'render' ( or 'video' ) group before you try rocm.
 
  * Download MyROCm from:
 
