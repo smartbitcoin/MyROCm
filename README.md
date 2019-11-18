@@ -17,38 +17,49 @@ Hint:  ubuntu 19.10 ship with kernel 5.3+ but missing navi firmware. it can be d
 
 https://github.com/smartbitcoin/MyROCm/releases/download/2.9_navi10/myrocm.2.9.tar.bz2
 
-cd /opt
-
-tar xvf myrocm.2.9.tar.bz2
+```
+ cd /opt
+ tar xvf myrocm.2.9.tar.bz2
+```
 
  * Config ROCm library path.
  
+ ```
  sudo touch /etc/ld.so.conf.d/rocm.conf
+ ```
  
  and put following two line into rocm.conf
  
+ ```
  /opt/rocm/lib
- 
  /opt/rocm/hsa/lib
+ ```
  
   * Try it out.
   
   check your navi was found:
   
   /opt/rocm/bin/rocminfo
+  
   ![](docs/rocminfo.png)
    
   /opt/rocm/bin/hipInfo
+  
   ![](docs/hipinfo.png)
   
   test the hip sample
   
-  /opt/rocm/hip/samples/0_Intro/bit_extract
-  
+  ```
+  cd /opt/rocm/hip/samples/0_Intro/bit_extract
   make
-  
   ./bit_extract
+  ```
   
+#### Known issue
+ * libhsa-ext-image64.so is propertory code and current binary have no navi support from amd yet.  texture related api will fail.
+ * sdma related function may not stable yet.
+ * opencl not tested yet as it availabe from amd propertary driver.   
+ 
   
   
   
