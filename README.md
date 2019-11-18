@@ -5,7 +5,7 @@ This repo provide MyROCm binary build and installation guide.
 Official rocm release lack the support for new hardware like Navi.
 
 #### Dependancy
-MyROCm running on  ubuntu 19.10 + ( linux kernel 5.3+ ).
+MyROCm running on  ubuntu 19.10 + ( linux kernel 5.3+ ).  or linux environment with kernel > 5.3 and gcc > 9.2.1
 
 #### Installation guide.
 
