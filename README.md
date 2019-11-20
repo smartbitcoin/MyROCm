@@ -1,4 +1,4 @@
-[![Github All Releases](https://img.shields.io/github/downloads/smartbitcoin/MyROCm/total.svg)]()
+
 
 ### MyROCm
 This repo provide MyROCm binary build and installation guide.
@@ -11,17 +11,9 @@ MyROCm running on  ubuntu 19.10 + ( linux kernel 5.3+ ).  or linux environment w
 
 #### Changes from official ROCM
 
-Few changes made for navi10, include
+Few changes made for navi10, include components:
 
- * Clang 
- 
- * Hcc
- 
- * Hip
- 
- * Hsa Rumtime
- 
- * Roct 
+ * Clang,Hcc,Hip,Hsa Rumtime,Roct 
 
 #### Installation guide.
 
@@ -86,9 +78,10 @@ https://github.com/smartbitcoin/MyROCm/releases/download/2.9_navi10/myrocm.2.9.t
   
 #### Known issue
  * libhsa-ext-image64.so is propertory code and current binary have no navi support from amd yet.  texture related api will fail.
- * sdma related function may not stable yet.
+ * Due to Navi kernel driver known issue,  complicated navi hip application maybe not stable yet.  ( ref:  https://github.com/torvalds/linux/blob/master/drivers/gpu/drm/amd/amdgpu/gfx_v10_0.c : line: 4457
  * opencl not tested yet as it availabe from amd propertary driver.   
  
   
   
   
+[![Github All Releases](https://img.shields.io/github/downloads/smartbitcoin/MyROCm/total.svg)]()
