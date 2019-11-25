@@ -54,6 +54,7 @@ https://github.com/smartbitcoin/MyROCm/releases/download/2.9_navi10/myrocm.2.9.t
  ```
  /opt/rocm/lib
  /opt/rocm/hsa/lib
+ /opt/rocm/hcc/lib
  ```
  
   * Try it out.
